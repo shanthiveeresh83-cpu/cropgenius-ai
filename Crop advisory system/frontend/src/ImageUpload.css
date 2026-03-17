@@ -1,0 +1,251 @@
+.image-toggle {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2196F3, #1976D2);
+  color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+
+.image-toggle:hover {
+  transform: scale(1.1);
+}
+
+.image-upload-modal {
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+  width: 400px;
+  max-height: 600px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  z-index: 1000;
+  animation: slideUp 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #2196F3, #1976D2);
+  color: white;
+  padding: 18px;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-content {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 520px;
+}
+
+.close-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.upload-area {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.instructions {
+  background: #e3f2fd;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.instructions h4 {
+  color: #1976D2;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+}
+
+.step-icon {
+  font-size: 28px;
+  margin-right: 12px;
+  min-width: 40px;
+}
+
+.step p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+}
+
+#file-input {
+  display: none;
+}
+
+.upload-label {
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.upload-label:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
+}
+
+.preview {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.preview img {
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 3px solid #e0e0e0;
+}
+
+.analyze-btn {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #2196F3, #1976D2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
+.analyze-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(33, 150, 243, 0.4);
+}
+
+.analyze-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.result-card {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  border: 2px solid #4CAF50;
+}
+
+.result-header h4 {
+  color: #4CAF50;
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #4CAF50;
+}
+
+.result-item {
+  display: flex;
+  align-items: flex-start;
+  margin: 15px 0;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.result-item .icon {
+  font-size: 32px;
+  margin-right: 15px;
+  min-width: 40px;
+}
+
+.result-item strong {
+  display: block;
+  color: #2c3e50;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.result-item p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.result-item.advice {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+}
+
+.error {
+  color: #d32f2f;
+  padding: 15px;
+  background: #ffebee;
+  border-radius: 10px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid #ef5350;
+}
+
+.error span {
+  font-size: 24px;
+  margin-right: 8px;
+}

@@ -1,0 +1,26 @@
+# AI Features Requirements
+# Install based on your needs:
+
+# === CORE (Required) ===
+pillow>=10.0.0
+numpy>=1.24.0
+
+# === CNN Disease Detection (Optional) ===
+# tensorflow>=2.13.0  # Uncomment for CNN features
+# OR
+# tensorflow-cpu>=2.13.0  # Lighter CPU-only version
+
+# === LLM Integration (Optional - Choose ONE) ===
+# groq>=0.4.0  # FREE - Recommended for students
+# OR
+# openai>=1.0.0  # Paid - More powerful
+
+# === Existing Requirements ===
+flask>=2.3.0
+flask-cors>=4.0.0
+flask-jwt-extended>=4.5.0
+flask-bcrypt>=1.0.1
+python-dotenv>=1.0.0
+scikit-learn>=1.3.0
+pandas>=2.0.0
+requests>=2.31.0
